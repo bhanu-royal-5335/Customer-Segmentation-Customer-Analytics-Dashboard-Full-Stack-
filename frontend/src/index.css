@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased transition-colors duration-200;
+  }
+}
+
+/* Glassmorphism SaaS UI styling */
+.glass-card {
+  @apply bg-slate-800/80 backdrop-blur-md border border-slate-700/60 shadow-xl rounded-2xl transition-all duration-300 hover:border-slate-600/80;
+}
+
+.glass-card-light {
+  @apply bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-lg rounded-2xl transition-all duration-300 hover:border-slate-300;
+}
+
+/* Gradient accents */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400;
+}
+
+.gradient-bg-primary {
+  @apply bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Print CSS Rules */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

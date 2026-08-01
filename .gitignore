@@ -1,0 +1,27 @@
+# Node dependencies & build output
+node_modules/
+dist/
+build/
+.vite/
+
+# Python virtual environment & cache
+python/venv/
+python/__pycache__/
+*.pyc
+*.pyo
+*.pkl
+
+# Uploaded temporary files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Environment variables
+.env
+backend/.env
+python/.env
+
+# IDE & OS files
+.DS_Store
+.vscode/
+.idea/
+*.log
